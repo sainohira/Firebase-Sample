@@ -1,0 +1,6 @@
+version: "Apple Swift version 2.2 (swiftlang-703.0.18.8 clang-703.0.31)"
+options: "79dd1fd5cb7876dc95e7edececcbb31e"
+build_time: [521698320, 841131000]
+inputs:
+  "/Users/kaigi/Documents/TestApp/TestApp/ViewController.swift": [521698229, 0]
+  "/Users/kaigi/Documents/TestApp/TestApp/AppDelegate.swift": [521698229, 0]

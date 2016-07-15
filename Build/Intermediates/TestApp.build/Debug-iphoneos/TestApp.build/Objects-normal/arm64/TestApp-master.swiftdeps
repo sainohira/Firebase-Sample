@@ -1,0 +1,8 @@
+version: "Apple Swift version 2.2 (swiftlang-703.0.18.8 clang-703.0.31)"
+options: "5ea421186c2fefa9e775c6a563dddd8f"
+build_time: [521801271, 515296000]
+inputs:
+  "/Users/kaigi/Documents/TestApp/TestApp/ViewController.swift": [521794089, 0]
+  "/Users/kaigi/Documents/TestApp/TestApp/Firebase/FireBaseFunctionsListTableViewController.swift": [521799861, 0]
+  "/Users/kaigi/Documents/TestApp/TestApp/Firebase/ChatViewController.swift": [521801269, 0]
+  "/Users/kaigi/Documents/TestApp/TestApp/AppDelegate.swift": [521712622, 0]

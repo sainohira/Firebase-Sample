@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChatViewController" customModule="TestApp" customModuleProvider="target">
+            <connections>
+                <outlet property="messageTextField" destination="s1f-aL-KhL" id="gnq-pu-WXE"/>
+                <outlet property="segment" destination="w93-P3-btH" id="Shv-lc-WqI"/>
+                <outlet property="sendButton" destination="LBy-sR-FDf" id="djB-Rt-6tJ"/>
+                <outlet property="tableView" destination="S5O-gc-UaU" id="xi6-Rj-0hb"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HZP-EQ-dSr">
+                    <rect key="frame" x="0.0" y="544" width="600" height="56"/>
+                    <subviews>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Message" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s1f-aL-KhL">
+                            <rect key="frame" x="8" y="13" width="519" height="30"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LBy-sR-FDf">
+                            <rect key="frame" x="535" y="13" width="57" height="30"/>
+                            <color key="backgroundColor" red="1" green="0.23597828962752776" blue="0.077667832523029889" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="57" id="W50-Tm-R2f"/>
+                                <constraint firstAttribute="height" constant="30" id="dgb-E8-2el"/>
+                            </constraints>
+                            <state key="normal" title="Send">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="sendButtonPush:" destination="-1" eventType="touchDown" id="hnd-FK-wb9"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.43683003701951018" green="0.75318359368951904" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="LBy-sR-FDf" firstAttribute="leading" secondItem="s1f-aL-KhL" secondAttribute="trailing" constant="8" id="8gC-v2-BIX"/>
+                        <constraint firstItem="s1f-aL-KhL" firstAttribute="top" secondItem="HZP-EQ-dSr" secondAttribute="top" constant="13" id="JKF-4f-LSZ"/>
+                        <constraint firstItem="s1f-aL-KhL" firstAttribute="leading" secondItem="HZP-EQ-dSr" secondAttribute="leading" constant="8" id="SeC-M6-prQ"/>
+                        <constraint firstAttribute="bottom" secondItem="LBy-sR-FDf" secondAttribute="bottom" constant="13" id="Tnj-i1-Isi"/>
+                        <constraint firstItem="LBy-sR-FDf" firstAttribute="top" secondItem="HZP-EQ-dSr" secondAttribute="top" constant="13" id="eip-P4-ep4"/>
+                        <constraint firstAttribute="trailing" secondItem="LBy-sR-FDf" secondAttribute="trailing" constant="8" id="iEu-7h-54K"/>
+                        <constraint firstAttribute="bottom" secondItem="s1f-aL-KhL" secondAttribute="bottom" constant="13" id="xx3-a0-HFB"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="S5O-gc-UaU">
+                    <rect key="frame" x="0.0" y="65" width="600" height="435"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="w93-P3-btH">
+                    <rect key="frame" x="0.0" y="508" width="600" height="29"/>
+                    <segments>
+                        <segment title="UserA"/>
+                        <segment title="UserB"/>
+                    </segments>
+                </segmentedControl>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="S5O-gc-UaU" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="65" id="2wf-HD-guR"/>
+                <constraint firstItem="HZP-EQ-dSr" firstAttribute="top" secondItem="w93-P3-btH" secondAttribute="bottom" constant="8" id="8g7-mj-C7d"/>
+                <constraint firstAttribute="bottom" secondItem="HZP-EQ-dSr" secondAttribute="bottom" id="C8v-PR-SGP"/>
+                <constraint firstAttribute="trailing" secondItem="HZP-EQ-dSr" secondAttribute="trailing" id="FMg-fL-hDs"/>
+                <constraint firstItem="S5O-gc-UaU" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Fsf-r4-Qj4"/>
+                <constraint firstItem="HZP-EQ-dSr" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="HF6-RF-kgV"/>
+                <constraint firstItem="w93-P3-btH" firstAttribute="top" secondItem="S5O-gc-UaU" secondAttribute="bottom" constant="8" id="TbX-S9-rbE"/>
+                <constraint firstAttribute="trailing" secondItem="w93-P3-btH" secondAttribute="trailing" id="Tl1-b1-drY"/>
+                <constraint firstItem="w93-P3-btH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="rdq-Pa-wSE"/>
+                <constraint firstAttribute="trailing" secondItem="S5O-gc-UaU" secondAttribute="trailing" id="zdx-Yj-Jbi"/>
+            </constraints>
+        </view>
+    </objects>
+</document>
